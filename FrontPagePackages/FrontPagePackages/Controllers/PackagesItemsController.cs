@@ -3,21 +3,21 @@ using System.Web.Mvc;
 
 namespace FrontPagePackages.Controllers
 {
-    public class PackagesController : Controller
+    public class PackagesItemsController : Controller
     {
         private DataProvider dataProvider;
 
-        public PackagesController()
+        public PackagesItemsController()
         {
             dataProvider = new DataProvider();
         }
 
         public RedirectToRouteResult Index()
         {
-            return RedirectToAction("Package");
+            return RedirectToAction("PackageItems");
         }
 
-        public ActionResult Package()
+        public ActionResult PackageItems()
         {
             return View();
         }

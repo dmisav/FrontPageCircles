@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Package";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Scripts/Controllers/PackageController.js"></script>
+
+<div ng-app="PackagesModule">
+    <div ng-controller="PackageController as PackageCntlr">
+        <div class="package-list">
+            <span ng-class="{'current': PackageCntlr.IsCurrent(package)}" ng-repeat="package in PackageCntlr.packages" ng-click="PackageCntlr.SetSelectedPkg(package)">{{package.DisplayName}}</span>
+        </div>
+
+        <div class="package-content">
+            <div class="circlePackage">{{PackageCntlr.selectedPkg.DisplayName}}</div>
+            <div ng-repeat="item in PackageCntlr.items">
+                <div class="circleBase" ng-class="PackageCntlr.GetItemClass(item)">
+                    <span>{{item.DisplayName}}</span>
+                    <p>{{item.ToolTieText}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

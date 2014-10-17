@@ -126,7 +126,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\PackagesController.cs" />
+    <Compile Include="Controllers\PackagesItemsController.cs" />
     <Compile Include="DataContext\DataProvider.cs" />
     <Compile Include="Entities\IDisplayableName.cs" />
     <Compile Include="Entities\Item.cs" />
@@ -225,8 +225,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Packages\Index.cshtml" />
-    <Content Include="Views\Packages\Package.cshtml" />
+    <Content Include="Views\PackagesItems\Index.cshtml" />
+    <Content Include="Views\PackagesItems\PackageItems.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

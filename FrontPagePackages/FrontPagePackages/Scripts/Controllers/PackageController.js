@@ -37,14 +37,14 @@ app.controller('PackageController', function ($http) {
     }
 
     function GetAllItems() {
-        var result = $http.get("../Packages/GetListOfItems");
+        var result = $http.get("../PackagesItems/GetListOfItems");
         result.success(function (data) {
             PkgCtrl.items = data;
         });
     };
 
     function GetAllPackages() {
-        var result = $http.get("../Packages/GetListOfPackages");
+        var result = $http.get("../PackagesItems/GetListOfPackages");
         result.success(function (data) {
             PkgCtrl.packages = data;
         });
